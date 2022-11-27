@@ -37,8 +37,8 @@ public slots:
     void setRating(int);
     void setComment();
     void loadData();
-    void setNewStandard(QString standard) { mCurrentStandard = standard; loadData(); }
-    void setNewStudent(QString student) { mCurrentStudent = student; loadData(); }
+    void setNewStandard(QString standard);
+    void setNewStudent(QString student);
     void exportData();
 };
 #endif // MAINWINDOW_H

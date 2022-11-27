@@ -80,7 +80,7 @@ void MainWindow::setupConnections()
 
 void MainWindow::loadStudents()
 {
-    QFile studentsFile("C:\\Users\\kgill\\Documents\\StudentAssessment\\build\\students.txt");
+    QFile studentsFile("C:\\Users\\kgill\\Documents\\Projects\\StudentAssessment\\build\\students.txt");
     studentsFile.open(QIODevice::ReadOnly);
 
     QTextStream in(&studentsFile);
@@ -351,6 +351,50 @@ void MainWindow::loadData()
     }
 }
 
+void MainWindow::setNewStandard(QString standard)
+{
+    mCurrentStandard = standard;
+    loadData();
+
+    if (ui->standardDropdown->currentIndex() == 0)
+    {
+        ui->prevStandardBtn->setEnabled(false);
+        ui->nextStandardBtn->setEnabled(true);
+    }
+    else if (ui->standardDropdown->currentIndex() == ui->standardDropdown->count() - 1)
+    {
+        ui->prevStandardBtn->setEnabled(true);
+        ui->nextStandardBtn->setEnabled(false);
+    }
+    else
+    {
+        ui->prevStandardBtn->setEnabled(true);
+        ui->nextStandardBtn->setEnabled(true);
+    }
+}
+
+void MainWindow::setNewStudent(QString student)
+{
+    mCurrentStudent = student;
+    loadData();
+
+    if (ui->studentDropdown->currentIndex() == 0)
+    {
+        ui->nextStudentBtn->setEnabled(true);
+        ui->prevStudentBtn->setEnabled(false);
+    }
+    else if (ui->studentDropdown->currentIndex() == ui->studentDropdown->count() - 1)
+    {
+        ui->prevStudentBtn->setEnabled(true);
+        ui->nextStudentBtn->setEnabled(false);
+    }
+    else
+    {
+        ui->prevStudentBtn->setEnabled(true);
+        ui->nextStudentBtn->setEnabled(true);
+    }
+}
+
 void MainWindow::exportData()
 {
     QString fileName = QFileDialog::getSaveFileName(this, "Export File", QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)) + ".md";
@@ -372,3 +416,4 @@ void MainWindow::exportData()
 
     outFile.close();
 }
+
