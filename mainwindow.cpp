@@ -65,6 +65,14 @@ void MainWindow::addStandards()
     mStandards["First"].append("6PR Play a variety of classroom instruments, alone and with others, and demonstrate proper technique.");
     mStandards["First"].append("7PR Demonstrate audience behavior appropriate for the context and style of music performed.");
 
+    mStandards["First"].append("1RE Recognize how music is used for a variety of occasions.");
+    mStandards["First"].append("2RE Describe how music communicates feelings, moods, images and meaning.");
+    mStandards["First"].append("3RE Communicate a response to music using dance, drama or visual art.");
+    mStandards["First"].append("4RE Connect concepts shared between music, other art forms and other curricular subjects.");
+    mStandards["First"].append("5RE Form and express personal opinions about a musical performance and show respect for the opinions of others.");
+    mStandards["First"].append("6RE Describe the challenges of individual and group music performance using music vocabulary.");
+    mStandards["First"].append("7RE Discuss audience behavior appropriate for the context and style of music performed.");
+
     mStandards.insert("Second", {});
     mStandards["Second"].append("1CE Identify patterns of same and different phrases in simple poems and songs.");
     mStandards["Second"].append("2CE Identify rounds and canons.");
