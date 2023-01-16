@@ -49,6 +49,22 @@ void MainWindow::addStandards()
     mStandards["K"].append("6RE Respond to sound with a drawing of how the sound makes them feel.");
     mStandards["K"].append("7RE Offer opinions about their own musical experiences and responses to music.");
 
+    mStandards.insert("First", {});
+    mStandards["First"].append("1CE Identify echo and call/response.");
+    mStandards["First"].append("2CE Explore steady beat, rhythm and meter.");
+    mStandards["First"].append("3CE Listen to and identify music of various and contrasting styles, composers, periods and cultures.");
+    mStandards["First"].append("4CE Identify elements of music using developmentally appropriate vocabulary (e.g., rhythm, syllables and solfege).");
+    mStandards["First"].append("5CE Explore selected musical instruments aurally and visually.");
+    mStandards["First"].append("6CE Attend live music performances with emphasis on concert etiquette.");
+
+    mStandards["First"].append("1PR Demonstrate echo and call/response.");
+    mStandards["First"].append("2PR Sing (using head voice and appropriate posture) and move to music of various styles, composers and cultures with accurate pitch and rhythm.");
+    mStandards["First"].append("3PR Read, write and perform using eighth notes, quarter notes and quarter rests.");
+    mStandards["First"].append("4PR Improvise new lyrics to known songs and experiment with digital technology.");
+    mStandards["First"].append("5PR Read, write and perform (e.g., la-sol-mi) melodies on the treble staff in G-do, F-do and C-do using a system (e.g., solfege, numbers or letters).");
+    mStandards["First"].append("6PR Play a variety of classroom instruments, alone and with others, and demonstrate proper technique.");
+    mStandards["First"].append("7PR Demonstrate audience behavior appropriate for the context and style of music performed.");
+
     mStandards.insert("Second", {});
     mStandards["Second"].append("1CE Identify patterns of same and different phrases in simple poems and songs.");
     mStandards["Second"].append("2CE Identify rounds and canons.");
