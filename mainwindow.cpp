@@ -24,30 +24,56 @@ MainWindow::~MainWindow()
 
 void MainWindow::addStandards()
 {
-    mStandards.append("1CE Identify patterns of same and different phrases in simple poems and songs.");
-    mStandards.append("2CE Identify rounds and canons.");
-    mStandards.append("3CE Listen to and identify music of various styles, composers, periods andcultures.");
-    mStandards.append("4CE Identify elements of music using developmentally appropriate vocabulary (e.g., rhythm, syllables and solfege).");
-    mStandards.append("5CE Explore selected musical instruments visually and aurally.");
-    mStandards.append("6CE Attend live music performances with emphasis on instrument and voice identification.");
+    mStandards.insert("K", {});
+    mStandards["K"].append("1CE Identify same and different (e.g., fast/slow, loud/soft, high/low and long/short).");
+    mStandards["K"].append("2CE Explore steady beat and rhythm.");
+    mStandards["K"].append("3CE Listen to and explore the music of various styles, composers, periods and cultures");
+    mStandards["K"].append("4CE Explore and identify a wide variety of sounds, including the human voice.");
+    mStandards["K"].append("5CE Explore a variety of classroom instruments. (e.g., metals, skins and woods.).");
+    mStandards["K"].append("6CE Attend live music performances");
+    mStandards["K"].append("8CE Explore connections between sound and its visual representation.");
 
-    mStandards.append("1PR Demonstrate rounds and canons.");
-    mStandards.append("2PR Sing (using head voice and appropriate posture) and move to music of various styles, composers and cultures with accurate pitch and rhythm.");
-    mStandards.append("3PR Read, write and perform using eighth notes, quarter notes, half notes and quarter rests in 2/4 and 4/4 meter.");
-    mStandards.append("4PR Improvise and compose simple rhythmic and melodic phrases.");
-    mStandards.append("5PR Read, write and perform using pentatonic (la-sol-mi-re-do) melodies on the treble staff in G-do, F-do, and C-do using a system (e.g., solfege, numbers or letters).");
-    mStandards.append("6PR Play a variety of classroom instruments, alone and with others, and demonstrate proper technique.");
+    mStandards["K"].append("1PR Demonstrate same and different (e.g., fast/slow, loud/soft, high/low and long/short).");
+    mStandards["K"].append("2PR Demonstrate a steady beat and maintain it while performing.");
+    mStandards["K"].append("3PR Sing (using head voice and appropriate posture) and move to music of various and contrasting styles, composers and cultures.");
+    mStandards["K"].append("4PR Create a wide variety of vocal and instrumental sounds.");
+    mStandards["K"].append("5PR Play a variety of classroom instruments, alone and with others, and demonstrate proper technique.");
+    mStandards["K"].append("6PR Demonstrate audience behavior appropriate for the context and style of music performed.");
+    mStandards["K"].append("7PR Create a visual representation of sound.");
 
-    mStandards.append("1RE Explain how music is used for a variety of purposes and occasions.");
-    mStandards.append("2RE Discuss music of various composers, periods, cultures and contrasting styles.");
-    mStandards.append("3RE Discuss how music communicates feelings, moods, images and meaning.");
-    mStandards.append("4RE Interpret music through dance, drama and visual art.");
-    mStandards.append("5RE Respond to patterns of same and different phrases in simple poems and songs.");
-    mStandards.append("6RE Discuss similarities and differences among the arts including connections between music and other curricular subjects.");
-    mStandards.append("7RE Discuss and write about their observations of types of voices and instruments heard in performances");
+    mStandards["K"].append("1RE Share ideas about musical selections of various and contrasting styles, composers and musical periods.");
+    mStandards["K"].append("2RE Describe how sounds and music are used in our daily lives.");
+    mStandards["K"].append("3RE Describe the difference between steady beat and rhythm.");
+    mStandards["K"].append("4RE Identify and connect a concept shared between music and another curricular subject.");
+    mStandards["K"].append("5RE Identify and discuss various uses of music in the United States and the various meanings of the term “musician.");
+    mStandards["K"].append("6RE Respond to sound with a drawing of how the sound makes them feel.");
+    mStandards["K"].append("7RE Offer opinions about their own musical experiences and responses to music.");
 
-    ui->standardDropdown->addItems(mStandards);
-    mCurrentStandard = mStandards[0];
+    mStandards.insert("Second", {});
+    mStandards["Second"].append("1CE Identify patterns of same and different phrases in simple poems and songs.");
+    mStandards["Second"].append("2CE Identify rounds and canons.");
+    mStandards["Second"].append("3CE Listen to and identify music of various styles, composers, periods andcultures.");
+    mStandards["Second"].append("4CE Identify elements of music using developmentally appropriate vocabulary (e.g., rhythm, syllables and solfege).");
+    mStandards["Second"].append("5CE Explore selected musical instruments visually and aurally.");
+    mStandards["Second"].append("6CE Attend live music performances with emphasis on instrument and voice identification.");
+
+    mStandards["Second"].append("1PR Demonstrate rounds and canons.");
+    mStandards["Second"].append("2PR Sing (using head voice and appropriate posture) and move to music of various styles, composers and cultures with accurate pitch and rhythm.");
+    mStandards["Second"].append("3PR Read, write and perform using eighth notes, quarter notes, half notes and quarter rests in 2/4 and 4/4 meter.");
+    mStandards["Second"].append("4PR Improvise and compose simple rhythmic and melodic phrases.");
+    mStandards["Second"].append("5PR Read, write and perform using pentatonic (la-sol-mi-re-do) melodies on the treble staff in G-do, F-do, and C-do using a system (e.g., solfege, numbers or letters).");
+    mStandards["Second"].append("6PR Play a variety of classroom instruments, alone and with others, and demonstrate proper technique.");
+
+    mStandards["Second"].append("1RE Explain how music is used for a variety of purposes and occasions.");
+    mStandards["Second"].append("2RE Discuss music of various composers, periods, cultures and contrasting styles.");
+    mStandards["Second"].append("3RE Discuss how music communicates feelings, moods, images and meaning.");
+    mStandards["Second"].append("4RE Interpret music through dance, drama and visual art.");
+    mStandards["Second"].append("5RE Respond to patterns of same and different phrases in simple poems and songs.");
+    mStandards["Second"].append("6RE Discuss similarities and differences among the arts including connections between music and other curricular subjects.");
+    mStandards["Second"].append("7RE Discuss and write about their observations of types of voices and instruments heard in performances");
+
+//    ui->standardDropdown->addItems(mStandards);
+//    mCurrentStandard = mStandards[0];
 }
 
 void MainWindow::setupConnections()

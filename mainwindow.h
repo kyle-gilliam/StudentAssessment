@@ -20,7 +20,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    QStringList mStandards;
+
+    QMap<QString, QStringList> mStandards;
+//    QStringList mStandards;
     QMap<QString, QMap<QString, QString>> mStandardsMap;
     QString mCurrentStudent;
     QString mCurrentStandard;
