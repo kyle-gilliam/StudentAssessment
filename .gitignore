@@ -1,5 +1,12 @@
 # Build files
 build/
+Makefile
+Makefile.Debug
+Makefile.Release
+ui_mainwindow.h
 
 # Qt User File
 *.pro.user
+
+# Misc QT Files
+.qmake.stash

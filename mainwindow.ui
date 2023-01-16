@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>859</width>
-    <height>413</height>
+    <width>866</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,11 +15,165 @@
   </property>
   <widget class="QWidget" name="btnLayout">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="QComboBox" name="standardDropdown"/>
+    <item row="5" column="0">
+     <layout class="QHBoxLayout" name="prevNextStudentLayout">
+      <item>
+       <widget class="QPushButton" name="prevStudentBtn">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Previous Student</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextStudentBtn">
+        <property name="text">
+         <string>Next Student</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
-    <item row="1" column="0">
-     <widget class="QComboBox" name="studentDropdown"/>
+    <item row="6" column="0">
+     <layout class="QHBoxLayout" name="lowerControlsLayout">
+      <item>
+       <widget class="QPushButton" name="finishBtn">
+        <property name="text">
+         <string>Finish</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="closeBtn">
+        <property name="text">
+         <string>Close</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <widget class="QTextEdit" name="commentBox"/>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="prevNextStandardLayout">
+      <item>
+       <widget class="QPushButton" name="prevStandardBtn">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Previous Standard</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextStandardBtn">
+        <property name="text">
+         <string>Next Standard</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="gradeTab">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>5</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>16</width>
+        <height>16</height>
+       </size>
+      </property>
+      <widget class="QWidget" name="kTab">
+       <attribute name="title">
+        <string>K</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="kStandardsDropdown"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="kStudentDropdown"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="firstTab">
+       <attribute name="title">
+        <string>1</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="firstStandardDropdown"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="firstStudentDropdown"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="secondTab">
+       <attribute name="title">
+        <string>2</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="secondStandardDropdown"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="secondStudentDropdown"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="thirdTab">
+       <attribute name="title">
+        <string>3</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="thirdStandardDropdown"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="thirdStudentDropdown"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fourthTab">
+       <attribute name="title">
+        <string>4</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="fourthStandardDropdown"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="fourthStudentDropdown"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="fifthTab">
+       <attribute name="title">
+        <string>5</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QComboBox" name="fifthStandardDropdown"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="fifthStudentDropdown"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
     </item>
     <item row="2" column="0">
      <layout class="QGridLayout" name="ratingLayout">
@@ -90,69 +244,6 @@
        <widget class="QLineEdit" name="fourLineEdit">
         <property name="text">
          <string>Student is excelling at this standard</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0">
-     <widget class="QTextEdit" name="commentBox"/>
-    </item>
-    <item row="4" column="0">
-     <layout class="QHBoxLayout" name="prevNextStandardLayout">
-      <item>
-       <widget class="QPushButton" name="prevStandardBtn">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Previous Standard</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="nextStandardBtn">
-        <property name="text">
-         <string>Next Standard</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="5" column="0">
-     <layout class="QHBoxLayout" name="prevNextStudentLayout">
-      <item>
-       <widget class="QPushButton" name="prevStudentBtn">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Previous Student</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="nextStudentBtn">
-        <property name="text">
-         <string>Next Student</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="6" column="0">
-     <layout class="QHBoxLayout" name="lowerControlsLayout">
-      <item>
-       <widget class="QPushButton" name="finishBtn">
-        <property name="text">
-         <string>Finish</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="closeBtn">
-        <property name="text">
-         <string>Close</string>
         </property>
        </widget>
       </item>

@@ -80,7 +80,7 @@ void MainWindow::setupConnections()
 
 void MainWindow::loadStudents()
 {
-    QFile studentsFile("C:\\Users\\kgill\\Documents\\Projects\\StudentAssessment\\build\\students.txt");
+    QFile studentsFile("students.txt");
     studentsFile.open(QIODevice::ReadOnly);
 
     QTextStream in(&studentsFile);
@@ -104,6 +104,12 @@ void MainWindow::loadStudents()
         }
 
         mStandardsMap.insert(studentName, studentStandardMap);
+    }
+
+    if (ui->studentDropdown->count() <= 1)
+    {
+        ui->prevStudentBtn->setEnabled(false);
+        ui->nextStudentBtn->setEnabled(false);
     }
 }
 
@@ -397,7 +403,7 @@ void MainWindow::setNewStudent(QString student)
 
 void MainWindow::exportData()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, "Export File", QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)) + ".md";
+    QString fileName = QFileDialog::getSaveFileName(this, "Export File", QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)) + ".txt";
 
     QFile outFile(fileName);
 
@@ -407,10 +413,10 @@ void MainWindow::exportData()
 
     for (QString student : mStandardsMap.keys())
     {
-        outStream << "# **" << student << "**";
+        outStream << student;
         for (QString standard : mStandardsMap[student].keys())
         {
-            outStream << "\n\t## " << standard << "\n\t\t ###" << mStandardsMap[student][standard] << "\n";
+            outStream << "\n\t" << standard << "\n\t\t" << mStandardsMap[student][standard] << "\n";
         }
     }
 
